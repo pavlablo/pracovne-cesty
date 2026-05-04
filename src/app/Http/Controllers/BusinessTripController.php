@@ -806,7 +806,7 @@ class BusinessTripController extends Controller
         $templatePath = "latex.$templateName";
 
         $SECRETARY_ID = 13;   // this should probably better go to some config...
-	
+
         $data = [];
         switch ($docType) {
             case DocumentType::FOREIGN_TRIP_AFFIDAVIT:
@@ -1045,7 +1045,7 @@ class BusinessTripController extends Controller
 
                     // Poistenie
                     'insuranceExpenseForeign' => $trip->insuranceExpense->amount_foreign ?? "Nenárokujem si",
-                    'insuranceExpense' => $trip->insuranceExpense->amount ?? "Nenárokujem si",
+                    'insuranceExpense' => $trip->insuranceExpense->amount_eur ?? "Nenárokujem si",
 
                     // Ine vydavky
                     'otherExpensesForeign' => $trip->otherExpense->amount_foreign ?? "Nenárokujem si",
